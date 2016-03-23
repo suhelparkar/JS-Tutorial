@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+form {
+    margin: 0 auto;
+    width:500px;
+}
+
+.left{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: center;
+}
+.right {
+    display: inline-block;
+    float: left;
+}
+.center {
+    clear: left;
+    margin: 20px 0 0 230px;
+    font-size:18px;
+}
+
+span{
+    color: red;
+}
