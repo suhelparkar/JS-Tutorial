@@ -1,53 +1,45 @@
 <html>
 <title>Registration Form</title>
 <head>
-    <h1>Registration Form </h1>
     <link rel="stylesheet" type="text/css" href="form.css">
     <script type="text/javascript" src="form.js"></script>
 </head>
 <body>
-<form id="myForm"  name="form" onsubmit="validateRegistrationForm()">
-    <div>
-        <div class="left">First Name<span>*</span>:
-        </div>
-        <div class="right"><input type="text" name="fname" id="fn" maxlength="25"  required>
-        </div>
-        <div class="left">Last Name<span>*</span>:
-        </div>
-        <div class="right"><input type="text" name="lname" id="ln" maxlength="25" required>
-        </div>
-        <div class="left">Email Id<span>*</span>:
-        </div>
-        <div class="right"><input type="text" name="email" id="mail" required>
-        </div>
-        <div class="left">Date of Birth<span>*</span>   :
-        </div>
-        <div class="right"><input type="date" name="age" id="dob" required>
-        </div>
-        <div class="left">Gender:
-        </div>
-        <div class="right"><input type="radio" name="gender" value="male" id="m"> Male
-        </div>
-        <div class="right"><input type="radio" name="gender" value="female" id="f"> Female
-        </div>
-        <div class="left">Interest:
-        </div>
-        <div class="right"><select id="interest">
-            <option value="IT">IT</option>
-            <option value="Sports">Sports</option>
-            <option value="Movies">Movies</option>
+<form id="myForm"  name="form" onsubmit=" return validateRegistrationForm()">
+    <div style="width: 60%; float:right">
+        <h1>Registration Form </h1>
+        <div>First Name<span>*</span>:
+            <input type="text" name="fname" id="fn" maxlength="25">
+        </div><br>
+        <div>Last Name<span>*</span>:
+            <input type="text" name="lname" id="ln" maxlength="25">
+        </div><br>
+        <div>Email Id<span>*</span>&nbsp&nbsp&nbsp&nbsp:
+            <input type="text" name="email" id="mail" >
+        </div><br>
+        <div>Date of Birth<span>*</span>   :
+            <input type="date" name="age" id="dob">
+        </div><br>
+        <div>Gender:
+            <input type="radio" name="gender" value="male" id="m"> Male
+            <input type="radio" name="gender" value="female" id="f"> Female
+        </div><br>
+        <div class="left">Interest:</div>
+        <div><select name="interest" id="int" multiple>
+            <option value="IT" id="it">IT</option>
+            <option value="Sports" id="sports">Sports</option>
+            <option value="Movies" id="movies">Movies</option>
             <option value="Music">Music</option>
             <option value="Social">Social</option>
             <option value="Science">Science</option>
             <option value="Cars">Cars</option>
             <option value="Bikes">Bikes</option>
         </select>
-        </div>
-        <div class="center">
-            <input type="submit" value="submit" >
+        </div><br>
+        <div  align="left" class="center">
+            <input type="submit" value="submit">
         </div>
     </div>
 </form>
-
 </body>
 </html>
