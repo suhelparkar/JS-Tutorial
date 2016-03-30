@@ -5,25 +5,32 @@
     <script type="text/javascript" src="form.js"></script>
 </head>
 <body>
-<form id="myForm"  name="form" onsubmit=" return validateRegistrationForm()">
-    <div style="width: 60%; float:right">
+<form class="data-form" id="myForm" name="personForm" method="POST" onsubmit="personRegistrationForm()">
+
+    <input type="hidden" name="getRow" id="getRow" value="1">
+    <div style="width: 25%; float:right">
         <h1>Registration Form </h1>
         <div>First Name<span>*</span>:
-            <input type="text" name="fname" id="fn" maxlength="25">
-        </div><br>
+            <input type="text" name="fName" id="firstName" maxlength="25">
+        </div>
+        <br>
         <div>Last Name<span>*</span>:
-            <input type="text" name="lname" id="ln" maxlength="25">
-        </div><br>
+            <input type="text" name="lName" id="lastName" maxlength="25">
+        </div>
+        <br>
         <div>Email Id<span>*</span>&nbsp&nbsp&nbsp&nbsp:
-            <input type="text" name="email" id="mail" >
-        </div><br>
-        <div>Date of Birth<span>*</span>   :
-            <input type="date" name="age" id="dob">
-        </div><br>
+            <input type="text" name="mail" id="eMail">
+        </div>
+        <br>
+        <div>Date of Birth<span>*</span> :
+            <input type="date" name="dob" id="age">
+        </div>
+        <br>
         <div>Gender:
             <input type="radio" name="gender" value="male" id="m"> Male
             <input type="radio" name="gender" value="female" id="f"> Female
-        </div><br>
+        </div>
+        <br>
         <div class="left">Interest:</div>
         <div><select name="interest" id="int" multiple>
             <option value="IT" id="it">IT</option>
@@ -35,10 +42,27 @@
             <option value="Cars">Cars</option>
             <option value="Bikes">Bikes</option>
         </select>
-        </div><br>
-        <div  align="left" class="center">
-            <input type="submit" value="submit">
         </div>
+        <br>
+        <div align="left" class="center">
+            <input id="formUpdate" type="button" value=" Add " onclick="personRegistrationForm()">
+            <input id="formReset" type="button" value=" Reset " onclick="resetForm()">
+        </div>
+    </div>
+    <div>
+        <table id="DataTable" cellspacing="5px" cellpadding="5%" ; align="left" border="1px">
+
+            <h1>Data Table </h1>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email ID</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Interest</th>
+                <th>Action</th>
+            </tr>
+        </table>
     </div>
 </form>
 </body>
